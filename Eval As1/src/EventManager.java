@@ -28,7 +28,7 @@ public class EventManager {
 	
 	public static Sport searchSport(String nameOfSport) throws SportNotFoundException {
 		for(Sport sport : sports) {
-			if(sport.getNameOfSport().equalsIgnoreCase(nameOfSport)) {
+			if(sport!=null && sport.getNameOfSport().equalsIgnoreCase(nameOfSport)) {
 				return sport;
 			}
 		}
@@ -57,9 +57,17 @@ public class EventManager {
 				}
 			}
 		}
-		
 	}
 	
-	
+	public static void printScheduleOfSport(String nameOfSport) {
+		for(SportsSchedule ss : schedule) {
+			for(int j=0;j<ss.getNamesOfSports().size();j++) {
+				String s = ss.getNamesOfSports().toArray()[j].toString();
+				if(s.equalsIgnoreCase(nameOfSport)) {
+					System.out.println("<----------"+ss.getDay()+"---------->");
+				}
+			}
+		}
+	}
 	
 }
