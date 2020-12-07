@@ -18,6 +18,14 @@ public class SportsSchedule {
 		this.namesOfSports = namesOfSports;
 	}
 	
+	public void addSport(String nameOfSport) {
+		this.namesOfSports.add(nameOfSport);
+	}
+	
+	public void removeSport(String nameOfSport) {
+		this.namesOfSports.remove(nameOfSport);
+	}
+	
 	@Override
 	public String toString() {
 		return "SportsSchedule [day=" + day + ", namesOfSports=" + namesOfSports + "]";

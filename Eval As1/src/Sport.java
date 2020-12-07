@@ -3,15 +3,6 @@ public class Sport {
 	private String nameOfSport;
 	private int max_participants;
 	
-	private Player[] player = new Player[SportsEventConstants.maxPlayersPerSport];
-	
-	
-	public Player[] getPlayer() {
-		return player;
-	}
-	public void setPlayer(Player[] player) {
-		this.player = player;
-	}
 	public String getNameOfSport() {
 		return nameOfSport;
 	}

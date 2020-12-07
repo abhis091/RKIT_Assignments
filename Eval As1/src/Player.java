@@ -1,9 +1,10 @@
+import java.util.ArrayList;
 
 public class Player {
 	
 	private static int id=0;
 	private String name;
-	private String[] sportsToRegister = new String[SportsEventConstants.maxSportsPerPlayer];
+	private ArrayList<String> sportsToRegister = new ArrayList<>();
 	
 	public int getId() {
 		return id;
@@ -17,10 +18,11 @@ public class Player {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public String[] getSportsToRegister() {
+	public ArrayList<String> getSportsToRegister() {
 		return sportsToRegister;
 	}
-	public void setSportsToRegister(String[] sportsToRegister) {
+	public void setSportsToRegister(ArrayList<String> sportsToRegister) {
 		this.sportsToRegister = sportsToRegister;
 	}
+	
 }
